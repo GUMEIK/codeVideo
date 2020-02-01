@@ -1,26 +1,44 @@
-import React from 'react';
+import React,{ReactDOM} from 'react';
+
 import logo from './logo.svg';
 import './App.css';
+import HeaderMenu from './component/headerMenu'
+import LayoutCom from './component/layout/index'
+import LeftMenu from './component/leftMenu'
+import CardCom from './component/card'
+import VideoCom from './component/video'
+import VideoContent from './component/videoContent'
+import { Button } from 'antd';
+import ModalCom from './component/modal'
+import './store/store'
+import {store} from './store/store'
+import {Provider} from 'react-redux'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+export default class App extends React.Component {
+  render() {
+    return (
+      <Provider store={store}>
+    <div className="App" style={{
+      width:"100%",
+      height:"100%"
+    }}>
+      {/* layout组件接受Header属性，作为头部属性 */}
+     <LayoutCom 
+     Header={<HeaderMenu/>}
+     leftMenu={<LeftMenu/>}
+    //  content={<VideoContent/>}
+    // content={<VideoCom/>}
+    content={
+    <div>
+    <VideoContent/>  
+    {/* <ModalCom/> */}
     </div>
-  );
+    }
+     />
+     
+    </div>
+    </Provider>
+    )
+  }
 }
 
-export default App;
