@@ -10,15 +10,11 @@ class CardCom extends Component {
             <Card
             onClick={()=>{
                 // 1.使modal显示
-                
                 // 2.将url传递给视频组件
                 console.log(this.props.source)
-                
                 // store.dispatch(createUrlSourceAction("http://www.msse.vip/video/test.mp4"))
                 this.props.changeUrl(this.props.source);
                 // this.props.show()
-
-                
             }}
             hoverable
             style={{ width: 240,margin:15 }}

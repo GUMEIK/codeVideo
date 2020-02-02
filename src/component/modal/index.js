@@ -37,7 +37,7 @@ class ModalCom extends React.Component {
           Open Modal with customized button props
         </Button> */}
         <Modal
-          title="Basic Modal"
+          title="谷美-视频播放页"
           visible={this.state.visible}
           // visible={true}
           onOk={this.handleOk}

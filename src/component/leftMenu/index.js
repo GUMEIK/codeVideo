@@ -1,5 +1,7 @@
 import { Menu, Icon } from 'antd';
 import React from 'react'
+import {store} from '../../store/store'
+import {createChangeContentAction} from '../../store/action/videoContent'
 const { SubMenu } = Menu;
 export default class LeftMenu extends React.Component {
   handleClick = e => {
@@ -20,21 +22,31 @@ export default class LeftMenu extends React.Component {
           title={
             <span>
               <Icon type="mail" />
-              <span>Navigation One</span>
+              <span>React</span>
             </span>
           }
         >
-          <Menu.ItemGroup key="g1" title="Item 1">
+          <Menu.ItemGroup key="g1" title="理论知识"
+          style={{
+            textAlign:"left"
+          }}
+          >
             <Menu.Item key="1"
             onClick={()=>{
-              alert("测试！")
+              store.dispatch(createChangeContentAction("test"))
             }}
-            >当我点击了</Menu.Item>
-            <Menu.Item key="2">Option 2</Menu.Item>
+            >001 React基础</Menu.Item>
+            <Menu.Item key="2">002 Redux   </Menu.Item>
+            <Menu.Item key="3">003 React-Router   </Menu.Item>
+            <Menu.Item key="4">004 React-Redux   </Menu.Item>
           </Menu.ItemGroup>
-          <Menu.ItemGroup key="g2" title="Item 2">
-            <Menu.Item key="3">Option 3</Menu.Item>
-            <Menu.Item key="4">Option 4</Menu.Item>
+          <Menu.ItemGroup key="g2" title="工程总结"
+          style={{
+            textAlign:"left"
+          }}
+          >
+            <Menu.Item key="5">005 React打包</Menu.Item>
+            <Menu.Item key="6">006 React-TypeScript</Menu.Item>
           </Menu.ItemGroup>
         </SubMenu>
         <SubMenu
