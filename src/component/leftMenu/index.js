@@ -36,7 +36,11 @@ export default class LeftMenu extends React.Component {
               store.dispatch(createChangeContentAction("test"))
             }}
             >001 React基础</Menu.Item>
-            <Menu.Item key="2">002 Redux   </Menu.Item>
+            <Menu.Item key="2" 
+            onClick={()=>{
+              store.dispatch(createChangeContentAction("redux"))
+            }}
+            >002 Redux(录制完成)</Menu.Item>
             <Menu.Item key="3">003 React-Router   </Menu.Item>
             <Menu.Item key="4">004 React-Redux   </Menu.Item>
           </Menu.ItemGroup>

@@ -50,3 +50,6 @@ function mapStateToProps(state){
         )
     }
   }
+
+//   root
+// www.xxx.com/fjkj/fjkjadk

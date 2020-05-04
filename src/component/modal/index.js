@@ -33,9 +33,6 @@ class ModalCom extends React.Component {
   render() {
     return (
       <div>
-        {/* <Button type="primary" onClick={this.showModal}>
-          Open Modal with customized button props
-        </Button> */}
         <Modal
           title="谷美-视频播放页"
           visible={this.state.visible}
@@ -45,16 +42,10 @@ class ModalCom extends React.Component {
           okButtonProps={{ disabled: true }}
           cancelButtonProps={{ disabled: true }}
           width="80%"
-          // style={{height:"80%"}}
-          // destroyOnClose={true}
         footer={null}
 
         >
-            {/* <VideoCom/> */}
-            {/* 11111111111111 */}
             <VideoCom  source={this.props.source} />
-            {/* <Test/> */}
-            {/* <h1>fhhdfhhfhfh</h1> */}
         </Modal>
       </div>
     );
