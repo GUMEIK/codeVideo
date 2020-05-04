@@ -12,14 +12,15 @@ export default class LeftMenu extends Component {
   >
     <PageHeader
       ghost={false}
-      onBack={() => window.history.back()}
+      // onBack={() => window.history.back()}
       title="videoList"
       subTitle="个人录制的关于前端的视频"
       extra={[
-        <Button key="3">联系作者</Button>,
-        <Button key="2">评论</Button>,
+        <Button key="3">
+          <a href="http://www.msse.vip">联系作者</a>
+        </Button>,
         <Button key="1" type="primary">
-          进入主页
+          <a href="http://www.msse.vip">进入主页</a>
         </Button>,
       ]}
     >
